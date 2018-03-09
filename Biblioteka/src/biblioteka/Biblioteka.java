@@ -18,6 +18,7 @@ public class Biblioteka implements BibliotekaInterfejs  {
 
 	@Override
 	public void obrisiKnjigu(Knjiga k) {
+		
 		if(k==null || !knjige.contains(k))throw new RuntimeException("Knjiga je null ili ne postoji u listi");
 		knjige.remove(k);
 		
