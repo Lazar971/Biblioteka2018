@@ -29,6 +29,9 @@ public class Biblioteka implements BibliotekaInterfejs  {
 
 	@Override
 	public LinkedList<Knjiga> pronadjiKnjigu(Autor a, String isbn, String naslov, String izdavac) {
+		if(naslov==null)
+			return null;
+		
 		LinkedList<Knjiga> nova=new LinkedList<Knjiga>();
 		for(Knjiga i:knjige) {
 			if(i.getNaslov().contains(naslov))nova.add(i);
